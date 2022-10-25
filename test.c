@@ -6,10 +6,11 @@
 /*   By: xander <xander@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/04/18 11:50:39 by xander        #+#    #+#                 */
-/*   Updated: 2022/04/22 16:07:31 by xander        ########   odam.nl         */
+/*   Updated: 2022/10/25 18:49:26 by xvoorvaa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Probs need to change this
 #include "ft_printf.h"
 
 #include <stdio.h>
@@ -42,11 +43,12 @@
 
 int	main(void)
 {
-	int				i;
-	int				ft_print;
-	int				print;
+	int32_t	i;
+	int32_t	ft_print;
+	int32_t	print;
 
 	i = 1;
+	printf("\nMANDOTARY\n");
 	PTEST("%s", (char *) 0);
 	PTEST("%d", INT_MAX);
 	PTEST("%i", INT_MIN);
@@ -55,9 +57,13 @@ int	main(void)
 	PTEST("%X", 50);
 	PTEST("%u", 50);
 	PTEST("%u", -50);
-	PTEST("%s & %s", "Xander", "Angeli");
+	PTEST("%s & %s", "Xander", "Lizz");
 	PTEST("%c", 'i');
 	PTEST("%u & %x", -50, -50);
+	PTEST("%%%%");
+	PTEST("%%%\0ffhhffhh");
+
+	printf("\nBONUS\n");
 	PTEST("%3x", 100);
 	PTEST("%5x", 1112300);
 	PTEST("%6u", 1100);
@@ -66,6 +72,5 @@ int	main(void)
 	PTEST("%10d", 21839);
 	PTEST("%4c", 'c');
 	PTEST("%12p", "Hallo");
-	PTEST("%%%%");
 	return (0);
 }
